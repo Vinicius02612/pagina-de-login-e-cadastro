@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+    background: linear-gradient(100deg,  #ff5e00, rgb(33, 20, 46));
+    height: 100vh;
+    overflow: hidden;
+}
+/*------------------------------------------------*/
+.center{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+   height: 400px;
+    background: white;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver ;
+}
+/*------------------------------------------------*/
+.center form{
+    padding: 0 45px;
+    box-sizing: border-box;
+}
+/*------------------------------------------------*/
+form .text-field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+   
+}
+.text-field input{
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 16px;
+    border: none;
+    /*background: none;*/
+    outline: none;
+}
+.text-field label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    color:#adadad ;
+    transform: translatey(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition:.5s ;
+}
+/*-------------------------------------------------------------------------------*/
+.text-field input:focus ~ label,
+.text-field input:valid ~ label {
+    top: -5px;
+    color: #26d9ac;
+    font-size: 14px;
+}
+/*------------------------------------------------*/
+.prog{
+    color: #129e48;
+}
+.pass{
+    margin: -5px 0 20px 5px ;
+    color: #9b8a8a;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+.pass a{
+    text-decoration:none;
+}
+.pass a:hover{
+    color: #0099ff;
+}
+/*------------------------------------------------*/
+input[type="submit"]{
+   
+    width:100%;
+    height: 50px;
+    border:1px solid;
+    background: #2691d6;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight:700 ;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #2665d9;
+    box-shadow:15px 5px #4b748f;
+    transition:.5s ;
+}
+/*------------------------------------------------*/
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size:16px ;
+    color:#c92e2e ;
+}
+.signup_link a{
+    color:#c92e2e ;
+    text-decoration: none ;
+    padding-left:5px ;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+    color: #2b0064;
+}
+
