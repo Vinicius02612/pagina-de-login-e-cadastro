@@ -1,1 +1,2 @@
-Este um projeto de uam página de login e cadstro desenvolvido com HTML e CSS.
+Este é uma projeto de uma página de login e cadstro desenvolvido com HTML e CSS.
+

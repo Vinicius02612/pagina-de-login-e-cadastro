@@ -4,7 +4,7 @@ body{
     font-family: 'montserrat';
     background: linear-gradient(100deg,  #ff5e00, rgb(33, 20, 46));
     height: 100vh;
-    overflow: hidden;
+   overflow: hidden;
 }
 /*------------------------------------------------*/
 .center{
@@ -13,9 +13,10 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-   height: 400px;
-    background: white;
+    height: 450px;
+    background:linear-gradient(50deg, #1010c5, #b31515);
     border-radius: 10px;
+    
 }
 .center h1{
     text-align: center;
@@ -26,6 +27,7 @@ body{
 .center form{
     padding: 0 45px;
     box-sizing: border-box;
+    
 }
 /*------------------------------------------------*/
 form .text-field{
@@ -40,7 +42,7 @@ form .text-field{
     padding: 0 5px;
     font-size: 16px;
     border: none;
-    /*background: none;*/
+    background: none;
     outline: none;
 }
 .text-field label{
@@ -94,7 +96,7 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
     border-color: #2665d9;
-    box-shadow:15px 5px #4b748f;
+    box-shadow:-10px -5px red ;
     transition:.5s ;
 }
 /*------------------------------------------------*/
@@ -114,3 +116,72 @@ input[type="submit"]:hover{
     color: #2b0064;
 }
 
+/*-----------------------Aparição do form------------------------------*/
+form {
+    overflow: hidden;
+    animation-name: apparition;
+    animation-duration: 500ms;
+}
+@keyframes apparition{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*-----------------------------Inputs da esquerda para a direita----------------------------------------- */
+
+form .text-field:nth-child(1){
+    animation: move 400ms;
+   
+  }
+  form .text-field:nth-child(2){
+    animation: move 400ms;
+    animation-delay: 300ms;
+    animation-fill-mode:backwards ;
+    
+  }
+  form .text-field:nth-child(3){
+    animation: move 400ms;
+    animation-delay: 600ms;
+    animation-fill-mode:backwards ;
+  }
+  form .button{
+    animation:move 400ms;
+    animation-delay: 750ms;
+    animation-fill-mode:backwards ;
+}
+@keyframes move {
+    from {
+      opacity: 0;
+      transform: translatex(-35%);
+     
+    }
+    to {
+      opacity: 1;
+      transform: translatex(0%);
+      
+    }
+  }
+  /*-------------------------------form no no-----------------------------------------------*/
+  form.validate-error{
+      animation:no 300ms;
+  }
+  @keyframes no{
+     0%{
+         transform: translateX(0);
+     }
+     35%{
+         transform: translateX(-15%);
+     }
+     70%{
+         transform: translateX(15%);
+     }
+     100%{
+         transform: translateX(0);
+     }
+  }
+ 
