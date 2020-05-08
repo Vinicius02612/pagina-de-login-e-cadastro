@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'montserrat';
-    background: linear-gradient(100deg,  #ff5e00, rgb(33, 20, 46));
+    background: linear-gradient(100deg, rgb(48, 166, 170), rgb(26, 197, 137));
     height: 100vh;
    overflow: hidden;
 }
@@ -14,7 +14,7 @@ body{
     transform: translate(-50%, -50%);
     width: 400px;
     height: 450px;
-    background:linear-gradient(50deg, #1010c5, #b31515);
+    background: linear-gradient(-70deg, rgb(73, 124, 126), rgb(121, 150, 140));
     border-radius: 10px;
     
 }
@@ -54,6 +54,7 @@ form .text-field{
     font-size: 16px;
     pointer-events: none;
     transition:.5s ;
+    
 }
 /*-------------------------------------------------------------------------------*/
 .text-field input:focus ~ label,
@@ -64,11 +65,17 @@ form .text-field{
 }
 /*------------------------------------------------*/
 .prog{
-    color: #129e48;
+    color: #ee1225;
+}
+.img{
+    width: 30px;
+    height: 30px;
+    margin: 3px 0 0 3px;
+   
 }
 .pass{
     margin: -5px 0 20px 5px ;
-    color: #9b8a8a;
+    color: #27355a;
     cursor: pointer;
 }
 .pass:hover{
@@ -78,7 +85,7 @@ form .text-field{
     text-decoration:none;
 }
 .pass a:hover{
-    color: #0099ff;
+    color: #0b0c0c;
 }
 /*------------------------------------------------*/
 input[type="submit"]{
@@ -90,7 +97,7 @@ input[type="submit"]{
     border-radius: 25px;
     font-size: 18px;
     color: #e9f4fb;
-    font-weight:700 ;
+    font-weight:700;
     cursor: pointer;
     outline: none;
 }
@@ -168,7 +175,8 @@ form .text-field:nth-child(1){
   }
   /*-------------------------------form no no-----------------------------------------------*/
   form.validate-error{
-      animation:no 300ms;
+      animation:no 300ms linear,  apparition paused ;
+      animation-iteration-count: 2;
   }
   @keyframes no{
      0%{
@@ -184,4 +192,34 @@ form .text-field:nth-child(1){
          transform: translateX(0);
      }
   }
- 
+ /*-----------------------------squares----------------------------*/
+body{
+    overflow: hidden;
+}
+ .squares li{
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    
+    background-color: rgba(255, 255, 255, 0.678);
+    display: block;
+    position:absolute;
+    bottom: -40px;
+    animation: up 2s infinite alternate;
+    
+}
+
+@keyframes up {
+    from{
+        opacity: 0;
+transform: translateY(0) ;
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-900px) rotate(960deg);
+    }
+
+}
